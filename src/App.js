@@ -1,25 +1,33 @@
 import React from 'react';
-import logo from './logo.svg';
+
 import './App.css';
+import Toolbar from './Hamburger';
+import {BrowserRouter as Router,Route,Switch} from 'react-router-dom'
+import Navigator from './Pages/Navigator'
+import MainPage from './Pages/MainPage';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    document.title="CS355 PROJECT",
+    
+      
+      
+      <Router>
+      <Toolbar />
+        <div>
+        
+    <div className="App" style={{height:'100%'}}>
+      <Switch>
+          <Route exact path="/~alta2882/cs355/" component={MainPage}/>
+          <Route exact path="/~alta2882/cs355/browser" component={Navigator}/>
+        
+      </Switch>
+      
+      
+        </div>
+      
     </div>
+    </Router>
   );
 }
 
