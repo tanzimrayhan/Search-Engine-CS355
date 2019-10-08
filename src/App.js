@@ -5,6 +5,7 @@ import Toolbar from './Hamburger';
 import {BrowserRouter as Router,Route,Switch} from 'react-router-dom'
 import Navigator from './Pages/Navigator'
 import MainPage from './Pages/MainPage';
+import Window from './Pages/Window'
 
 function App() {
   return (
@@ -20,7 +21,7 @@ function App() {
       <Switch>
           <Route exact path="/~alta2882/cs355/" component={MainPage}/>
           <Route exact path="/~alta2882/cs355/browser" component={Navigator}/>
-        
+          <Route exact path="/~alta2882/cs355/window" component={Window}/>
       </Switch>
       
       

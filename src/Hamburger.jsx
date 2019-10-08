@@ -3,6 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import {Nav,Navbar,NavDropdown,Form,FormControl,Button} from 'react-bootstrap'
 import {Link } from "react-router-dom"
 
+ 
 
 
 
@@ -35,7 +36,7 @@ const Toolbar=props=>(
          
             <NavDropdown.Item >  <Link to="/~alta2882/cs355/browser">Navigator</Link></NavDropdown.Item>
             
-        <NavDropdown.Item href="#action/3.2">Window</NavDropdown.Item>
+        <NavDropdown.Item><Link to="/~alta2882/cs355/window">Window</Link></NavDropdown.Item>
         <NavDropdown.Item href="#action/3.3">Screen</NavDropdown.Item>
         <NavDropdown.Item href="#action/3.3">Location</NavDropdown.Item>
         <NavDropdown.Divider />

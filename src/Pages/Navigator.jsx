@@ -36,7 +36,7 @@ class Navigator extends Component{
             
             <div className="App" style={{height:'100%'}}  >
                 <header className="App-header">
-                    <p style={{padding:'5rem', textAlign:"left"}}> 
+                    <p style={{padding:'5rem', }}> 
                         {this.browserAppName()} 
                         <br/> 
                         {this.browserVersion()}
