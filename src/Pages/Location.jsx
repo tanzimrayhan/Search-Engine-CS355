@@ -14,15 +14,33 @@ class Location extends Component{
         return document.write="The hostname is : "+x;
     }
 
+    findPathName=()=>{
+        var x=window.location.pathname;
+        return document.write="The pathname is : "+x;
+    }
+
+    findProtocol=()=>{
+        var x=window.location.protocol;
+        if(x.includes(":")){
+            x=x.replace(":","");
+            x=x.toUpperCase();
+        }
+        return document.write="The protocol is : "+x;
+    }
+
     render(){
         document.title="Location Info";
         return(
-            <div className="App" style={{height:'100%'}}  >
+            <div className="App" style={{height:'100%' }}  >
                 <header className="App-header">
-                    <p style={{padding:'5rem', }}> 
+                    <p style={{padding:'5rem', textAlign:"left" }}> 
                         {this.findHref()}
                         <br/>
                         {this.findHostname()}
+                        <br/>
+                        {this.findPathName()}
+                        <br/>
+                        {this.findProtocol()}
                     </p>
                 </header>
             </div>

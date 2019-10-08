@@ -23,7 +23,7 @@ const Toolbar=props=>(
       <Nav.Link ><Link to="/~alta2882/cs355/">Home </Link></Nav.Link>
       
       
-      <Nav.Link href="#">About</Nav.Link>
+      
       <NavDropdown title="Courses" id="basic-nav-dropdown">
       <NavDropdown.Item href="https://learn.zybooks.com/zybook/CUNYCSCI355TeitelmanFall2019">ZyBook</NavDropdown.Item>
       
@@ -37,11 +37,12 @@ const Toolbar=props=>(
             <NavDropdown.Item >  <Link to="/~alta2882/cs355/browser">Navigator</Link></NavDropdown.Item>
             
         <NavDropdown.Item><Link to="/~alta2882/cs355/window">Window</Link></NavDropdown.Item>
-        <NavDropdown.Item href="#action/3.3">Screen</NavDropdown.Item>
+        <NavDropdown.Item ><Link to="/~alta2882/cs355/screen">Screen</Link></NavDropdown.Item>
         <NavDropdown.Item ><Link to="/~alta2882/cs355/location"> Location</Link></NavDropdown.Item>
         <NavDropdown.Divider />
         <NavDropdown.Item href="#action/3.4">Geo Location</NavDropdown.Item>
       </NavDropdown>
+      <Nav.Link href="#">About</Nav.Link>
     </Nav>
     <Form inline>
       <FormControl type="text" placeholder="Search" className="mr-sm-2" />

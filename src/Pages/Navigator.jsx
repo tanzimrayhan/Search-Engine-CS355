@@ -30,13 +30,14 @@ class Navigator extends Component{
         return document.write=x;
     }
 
+    
     render(){
         document.title="Browser Info"
         return(
             
             <div className="App" style={{height:'100%'}}  >
                 <header className="App-header">
-                    <p style={{padding:'5rem', }}> 
+                    <p style={{padding:'5rem', textAlign:'left' }}> 
                         {this.browserAppName()} 
                         <br/> 
                         {this.browserVersion()}

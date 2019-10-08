@@ -22,7 +22,7 @@ class Window extends Component{
         return(
             <div className="App" style={{height:'100%'}}  >
                 <header className="App-header">
-                    <p style={{padding:'5rem', }}> 
+                    <p style={{padding:'5rem', textAlign:"left" }}> 
                         {this.innerWidth()}
                         <br/>
                         {this.innerHeight()}
