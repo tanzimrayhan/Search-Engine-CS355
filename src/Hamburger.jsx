@@ -38,7 +38,7 @@ const Toolbar=props=>(
             
         <NavDropdown.Item><Link to="/~alta2882/cs355/window">Window</Link></NavDropdown.Item>
         <NavDropdown.Item href="#action/3.3">Screen</NavDropdown.Item>
-        <NavDropdown.Item href="#action/3.3">Location</NavDropdown.Item>
+        <NavDropdown.Item ><Link to="/~alta2882/cs355/location"> Location</Link></NavDropdown.Item>
         <NavDropdown.Divider />
         <NavDropdown.Item href="#action/3.4">Geo Location</NavDropdown.Item>
       </NavDropdown>

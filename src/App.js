@@ -1,11 +1,13 @@
 import React from 'react';
-
 import './App.css';
-import Toolbar from './Hamburger';
 import {BrowserRouter as Router,Route,Switch} from 'react-router-dom'
-import Navigator from './Pages/Navigator'
-import MainPage from './Pages/MainPage';
-import Window from './Pages/Window'
+
+//Importing Pages and components
+import Toolbar from './Hamburger'; //NavBar component
+import Navigator from './Pages/Navigator' //Navigator Page
+import MainPage from './Pages/MainPage'; //Main HomePage
+import Window from './Pages/Window' //Window Page
+import Location from './Pages/Location' //Location Page
 
 function App() {
   return (
@@ -22,6 +24,7 @@ function App() {
           <Route exact path="/~alta2882/cs355/" component={MainPage}/>
           <Route exact path="/~alta2882/cs355/browser" component={Navigator}/>
           <Route exact path="/~alta2882/cs355/window" component={Window}/>
+          <Route exact path="/~alta2882/cs355/location" component={Location}/>
       </Switch>
       
       
