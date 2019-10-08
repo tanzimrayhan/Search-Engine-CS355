@@ -31,9 +31,9 @@ class Location extends Component{
     render(){
         document.title="Location Info";
         return(
-            <div className="App" style={{height:'100%' }}  >
-                <header className="App-header">
-                    <p style={{padding:'5rem', textAlign:"left" }}> 
+            <div className="App" style={{height:'100%', textSizeAdjust:"12" }}  >
+                <header className="Location-header">
+                    <p style={{padding:'5rem', textAlign:"left",  textSizeAdjust:"12" }}> 
                         {this.findHref()}
                         <br/>
                         {this.findHostname()}
