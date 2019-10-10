@@ -14,7 +14,7 @@ const Toolbar=props=>(
   <Navbar.Toggle aria-controls="basic-navbar-nav" />
   <Navbar.Collapse id="basic-navbar-nav">
     <Nav className="mr-auto">
-      <Nav.Link ><Link to="/~alta2882/cs355/">Home </Link></Nav.Link>
+      <Nav.Link ><Link to="/~alta2882/cs355/" style={{color:"grey"}}>Home </Link></Nav.Link>
 
       <NavDropdown title="Courses" id="basic-nav-dropdown">
         <NavDropdown.Item href="https://learn.zybooks.com/zybook/CUNYCSCI355TeitelmanFall2019">ZyBook</NavDropdown.Item>
