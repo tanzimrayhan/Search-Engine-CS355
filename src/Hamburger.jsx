@@ -28,7 +28,7 @@ const Toolbar=props=>(
         <NavDropdown.Item ><Link to="/~alta2882/cs355/screen">Screen</Link></NavDropdown.Item>
         <NavDropdown.Item ><Link to="/~alta2882/cs355/location"> Location</Link></NavDropdown.Item>
         <NavDropdown.Divider />
-        <NavDropdown.Item href="#action/3.4">Geo Location</NavDropdown.Item>
+        <NavDropdown.Item ><Link to="/~alta2882/cs355/Geolocation">Geo Location</Link></NavDropdown.Item>
       </NavDropdown>
 
       <NavDropdown title="About" id="basic-nav-dropdown" >

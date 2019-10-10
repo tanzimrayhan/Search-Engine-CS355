@@ -11,6 +11,7 @@ import Location from './Pages/Location' //Location Page
 import Screen from './Pages/Screen'
 import ContactUs from './Pages/ContactUs'
 import Developers from './Pages/Developers';
+import GeoLocation from './Pages/GeoLocation';
 
 function App() {
   return (
@@ -31,6 +32,7 @@ function App() {
           <Route exact path="/~alta2882/cs355/screen" component={Screen}/>
           <Route exact path="/~alta2882/cs355/contactus" component={ContactUs}/>
           <Route exact path="/~alta2882/cs355/developers" component={Developers}/>
+          <Route exact path="/~alta2882/cs355/Geolocation" component={GeoLocation}/>
       </Switch>
       
       
