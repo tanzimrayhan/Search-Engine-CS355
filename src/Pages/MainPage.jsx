@@ -1,5 +1,5 @@
 import React,{Component} from 'react'
-import logo from '../logo.svg';
+import {Link} from 'react-router-dom'
 import '../App.css';
 
 
@@ -11,15 +11,12 @@ class MainPage extends Component{
         document.title="CS355 PROJECT",
         <div className="App" style={{height:'100%'}}>
           <header className="App-header" >
-            <img src={logo} className="App-logo" alt="logo" />
-            <p>Welcome! <code>LOVE FOR Tanzim</code> </p>
-            <a className="App-link"
-              href="https://github.com/tanzimrayhan"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Learn About Developers
-            </a>
+            
+            <p>Welcome to <code>Search and Reporting Application</code> </p>
+            <Link to="/~alta2882/cs355/developers" className="App-link"
+              
+              >Learn About Developers</Link>
+            
           </header>
         </div>
       );

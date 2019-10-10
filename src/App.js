@@ -9,6 +9,8 @@ import MainPage from './Pages/MainPage'; //Main HomePage
 import Window from './Pages/Window' //Window Page
 import Location from './Pages/Location' //Location Page
 import Screen from './Pages/Screen'
+import ContactUs from './Pages/ContactUs'
+import Developers from './Pages/Developers';
 
 function App() {
   return (
@@ -27,6 +29,8 @@ function App() {
           <Route exact path="/~alta2882/cs355/window" component={Window}/>
           <Route exact path="/~alta2882/cs355/location" component={Location}/>
           <Route exact path="/~alta2882/cs355/screen" component={Screen}/>
+          <Route exact path="/~alta2882/cs355/contactus" component={ContactUs}/>
+          <Route exact path="/~alta2882/cs355/developers" component={Developers}/>
       </Switch>
       
       
