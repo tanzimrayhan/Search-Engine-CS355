@@ -11,7 +11,7 @@ const ContactUs = () => {
           <form>
             <p className="h5 text-center mb-4">Write to us</p>
             <div className="grey-text">
-              <p>Email: tanzim.ali82@qmail.cuny.edu</p>
+              <p>Email: <a href="mailto:tanzim.ali82@qmail.cuny.edu">tanzim.ali82@qmail.cuny.edu</a></p>
               <p>Phone: +17174303482</p>
               
               
