@@ -13,6 +13,7 @@ import ContactUs from './Pages/ContactUs'
 import Developers from './Pages/Developers';
 import GeoLocation from './Pages/GeoLocation';
 
+
 function App() {
   return (
     document.title="CS355 PROJECT",
@@ -21,6 +22,7 @@ function App() {
       
       <Router>
       <Toolbar />
+      
         <div>
         
     <div className="App" style={{height:'100%'}}>
