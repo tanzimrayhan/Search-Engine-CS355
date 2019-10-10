@@ -6,10 +6,11 @@ import {Link } from "react-router-dom"
 const Toolbar=props=>(   
     
   <header className="hamburger" >
+    
           
      <Navbar bg="light" expand="lg">
 
-  <Navbar.Brand href="https://venus.cs.qc.cuny.edu/~alta2882/cs355">LOGO</Navbar.Brand>
+  <Navbar.Brand href="https://venus.cs.qc.cuny.edu/~alta2882/cs355"><img src="https://image.shutterstock.com/image-vector/search-icon-one-set-web-450w-305205731.jpg" alt="LOGO" width="30" height="30" /></Navbar.Brand>
   <Navbar.Toggle aria-controls="basic-navbar-nav" />
   <Navbar.Collapse id="basic-navbar-nav">
     <Nav className="mr-auto">
