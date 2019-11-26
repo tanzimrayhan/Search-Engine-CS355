@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import {BrowserRouter as Router,Route,Switch} from 'react-router-dom'
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 
 //Importing Pages and components
 import Toolbar from './Hamburger'; //NavBar component
@@ -12,35 +12,37 @@ import Screen from './Pages/Screen'
 import ContactUs from './Pages/ContactUs'
 import Developers from './Pages/Developers';
 import GeoLocation from './Pages/GeoLocation';
+import SearchByFile from './Pages/SeachByFiles';
 
 
 function App() {
   return (
-    document.title="CS355 PROJECT",
-    
-      
-      
-      <Router>
+    document.title = "CS355 PROJECT",
+
+
+
+    <Router>
       <Toolbar />
-      
-        <div>
-        
-    <div className="App" style={{height:'100%'}}>
-      <Switch>
-          <Route exact path="/~alta2882/cs355/" component={MainPage}/>
-          <Route exact path="/~alta2882/cs355/browser" component={Navigator}/>
-          <Route exact path="/~alta2882/cs355/window" component={Window}/>
-          <Route exact path="/~alta2882/cs355/location" component={Location}/>
-          <Route exact path="/~alta2882/cs355/screen" component={Screen}/>
-          <Route exact path="/~alta2882/cs355/contactus" component={ContactUs}/>
-          <Route exact path="/~alta2882/cs355/developers" component={Developers}/>
-          <Route exact path="/~alta2882/cs355/Geolocation" component={GeoLocation}/>
-      </Switch>
-      
-      
+
+      <div>
+
+        <div className="App" style={{ height: '100%' }}>
+          <Switch>
+            <Route exact path="/~alta2882/cs355/" component={MainPage} />
+            <Route exact path="/~alta2882/cs355/browser" component={Navigator} />
+            <Route exact path="/~alta2882/cs355/window" component={Window} />
+            <Route exact path="/~alta2882/cs355/location" component={Location} />
+            <Route exact path="/~alta2882/cs355/screen" component={Screen} />
+            <Route exact path="/~alta2882/cs355/contactus" component={ContactUs} />
+            <Route exact path="/~alta2882/cs355/developers" component={Developers} />
+            <Route exact path="/~alta2882/cs355/Geolocation" component={GeoLocation} />
+            <Route exact path="/~alta2882/cs355/SearchByFile" component={SearchByFile} />
+          </Switch>
+
+
         </div>
-      
-    </div>
+
+      </div>
     </Router>
   );
 }
