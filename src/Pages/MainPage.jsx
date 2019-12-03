@@ -1,54 +1,58 @@
-import React,{Component} from 'react';
-import {Link} from 'react-router-dom';
+import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import '../App.css';
+<<<<<<< HEAD
 //import axios from 'axios';
 import {isAndroid,isMobile,isIOS, osName, osVersion,mobileModel} from 'react-device-detect';
+=======
 
+>>>>>>> 5ec2c4ba4ed1ea93d1a3c65d42946c724d697bb0
 
+import { isAndroid, isMobile, isIOS, osName, osVersion, mobileModel } from 'react-device-detect';
+
+<<<<<<< HEAD
 class MainPage extends Component{
   checkIfMobile=()=>{
     if(isMobile && isAndroid){
         return document.write="You are visiting it from your android phone. ";
+=======
+
+
+
+class MainPage extends Component {
+  checkIfMobile = () => {
+    if (isMobile && isAndroid) {
+      return document.write = "You are visiting it from your android phone. ";
+>>>>>>> 5ec2c4ba4ed1ea93d1a3c65d42946c724d697bb0
 
     }
-    else if(isMobile && isIOS){
-      return document.write="Thanks for visiting from your iPhone"
+    else if (isMobile && isIOS) {
+      return document.write = "Thanks for visiting from your iPhone"
     }
     else {
-      return document.write="You are visiting from a desktop. ";
+      return document.write = "You are visiting from a desktop. ";
     }
   }
 
-  getModelName=()=>{
-    if(mobileModel!=="none"){
-    var x ="Your phone model is : "+mobileModel;
-    return x;
-    }
-    else return ;
-  }
-
-  getOsName=()=>{
-      var x="Your OS is: "+osName;
+  getModelName = () => {
+    if (mobileModel !== "none") {
+      var x = "Your phone model is : " + mobileModel;
       return x;
+    }
+    else return;
   }
 
-  getOsVersion=()=>{
-    var x="OS version : "+osVersion;
+  getOsName = () => {
+    var x = "Your OS is: " + osName;
     return x;
   }
-  onChangeHandler=event=>{
-    this.setState({
-      selectedFile: event.target.files,
-      loaded:0,
-      
-      
-    })
-    
-    var fileName=event.target.files[0].name;
-    console.log(fileName);
 
-    
+  getOsVersion = () => {
+    var x = "OS version : " + osVersion;
+    return x;
+  }
 
+<<<<<<< HEAD
     }
         
   
@@ -81,53 +85,37 @@ class MainPage extends Component{
   else {alert("Not a json file. Please upload a json file")}
     
   }
+=======
+>>>>>>> 5ec2c4ba4ed1ea93d1a3c65d42946c724d697bb0
 
-  render(){
-      
-      return(
-    
-        document.title="CS355 PROJECT",
-        <div className="App" style={{height:'100%'}}>
-          <header className="App-header" >
-            <div className="Container">
-              <div className="Row">
-                <div className="offset-md-3 col-md-6">
-                  <div className="form-group files">
-                    <label>Upload your file</label>
-                    <input type="file" name="file" accept=".csv,.xlm,.json" onChange={this.onChangeHandler}/>
-                    <div>
-                    <br/>
-                    <button type="button" className="btn btn-success btn-block" onClick={this.onClickHandler}>Upload</button> 
-                    </div>
+  render() {
 
-                    <div className="Results" id="results">
+    return (
 
+      document.title = "CS355 PROJECT",
+      <div className="App" style={{ height: '100%' }}>
+        <header className="App-header" >
 
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <br/>
+          <br />
 
-            <p>Welcome to <code>Search and Reporting Application</code> </p>
-            <p>
-              <code> {this.checkIfMobile()} </code>
-              <br/>
-              {this.getModelName()}
-              <br/>
+          <p>Welcome to <code>Search and Reporting Application</code> </p>
+          <p>
+            <code> {this.checkIfMobile()} </code>
+            <br />
+            {this.getModelName()}
+            <br />
 
-              {this.getOsName()}
-              <br/>
-              {this.getOsVersion()}
-            </p>
-            <Link to="/~alta2882/cs355/developers" className="App-link"
-              
-              >Learn About Developers</Link>
-            
-          </header>
-        </div>
-      );
+            {this.getOsName()}
+            <br />
+            {this.getOsVersion()}
+          </p>
+          <Link to="/~alta2882/cs355/developers" className="App-link"
+
+          >Learn About Developers</Link>
+
+        </header>
+      </div>
+    );
   };
 }
 

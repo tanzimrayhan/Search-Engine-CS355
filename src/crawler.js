@@ -1,6 +1,6 @@
-var request= require('request');
-var cheerio=require('cheerio');
-var url=require('url-parse');
+var request = require('request');
+var cheerio = require('cheerio');
+var url = require('url-parse');
 
 var START_URL = "http://www.amazon.com";
 var SEARCH_WORD = "deal of the day";
@@ -16,42 +16,42 @@ pagesToVisit.push(START_URL);
 //console.log("Visiting page " + pageToVisit);
 crawl();
 
-function crawl(){
-  if(numPagesVisited>=MAX_PAGES_TO_VISIT){
+function crawl() {
+  if (numPagesVisited >= MAX_PAGES_TO_VISIT) {
     console.log("Reached the max limit of number of pages to visit");
     return;
   }
 
-  var nextPage=pagesToVisit.pop();
-  if(nextPage in pagesVisited){
+  var nextPage = pagesToVisit.pop();
+  if (nextPage in pagesVisited) {
     crawl();
   }
-  else{
-    visitPage(nextPage,crawl);
+  else {
+    visitPage(nextPage, crawl);
   }
 }
 
-function visitPage(url,callback){
+function visitPage(url, callback) {
   //Adding page to our set to maintain consistency
-  pagesVisited[url]=true;
+  pagesVisited[url] = true;
   numPagesVisited++;
 
   //Making the req
-  console.log("Visiting page "+url);
+  console.log("Visiting page " + url);
   request(url, function (error, response, body) {
-    
+
     // Check status code (200 is HTTP OK)
     console.log("Status code: " + response.statusCode);
-    if(response.statusCode!==200){
+    if (response.statusCode !== 200) {
       callback();
       return;
     }
     if (response.statusCode === 200) {
       // Parse the document body
       var $ = cheerio.load(body);
-      var isWordFound=searchForWord($,SEARCH_WORD);
-      if(isWordFound){
-        console.log("Word "+SEARCH_WORD+"found at page "+url);
+      var isWordFound = searchForWord($, SEARCH_WORD);
+      if (isWordFound) {
+        console.log("Word " + SEARCH_WORD + "found at page " + url);
       }
       else {
         collectInternalLinks($);
@@ -66,15 +66,15 @@ function visitPage(url,callback){
 
 
 
-function searchForWord ($, word) {
-    var bodyText = $('html > body').text().toLowerCase();
-    return(bodyText.indexOf(word.toLowerCase())!==-1); 
+function searchForWord($, word) {
+  var bodyText = $('html > body').text().toLowerCase();
+  return (bodyText.indexOf(word.toLowerCase()) !== -1);
 }
 
 function collectInternalLinks($) {
   var relativeLinks = $("a[href^='/']");
   console.log("Found " + relativeLinks.length + " relative links on page");
-  relativeLinks.each(function() {
-      pagesToVisit.push(baseUrl + $(this).attr('href'));
+  relativeLinks.each(function () {
+    pagesToVisit.push(baseUrl + $(this).attr('href'));
   });
 }
