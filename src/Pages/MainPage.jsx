@@ -2,10 +2,7 @@ import React,{Component} from 'react';
 import {Link} from 'react-router-dom';
 import '../App.css';
 //import axios from 'axios';
-
 import {isAndroid,isMobile,isIOS, osName, osVersion,mobileModel} from 'react-device-detect';
-
-
 
 
 class MainPage extends Component{
@@ -54,10 +51,6 @@ class MainPage extends Component{
 
     }
         
-
-  
-  
-
   
   constructor(props) {
     super(props);
