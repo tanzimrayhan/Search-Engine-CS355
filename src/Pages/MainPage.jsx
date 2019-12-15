@@ -1,29 +1,15 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import '../App.css';
-<<<<<<< HEAD
 //import axios from 'axios';
 import {isAndroid,isMobile,isIOS, osName, osVersion,mobileModel} from 'react-device-detect';
-=======
 
->>>>>>> 5ec2c4ba4ed1ea93d1a3c65d42946c724d697bb0
 
-import { isAndroid, isMobile, isIOS, osName, osVersion, mobileModel } from 'react-device-detect';
 
-<<<<<<< HEAD
 class MainPage extends Component{
   checkIfMobile=()=>{
     if(isMobile && isAndroid){
         return document.write="You are visiting it from your android phone. ";
-=======
-
-
-
-class MainPage extends Component {
-  checkIfMobile = () => {
-    if (isMobile && isAndroid) {
-      return document.write = "You are visiting it from your android phone. ";
->>>>>>> 5ec2c4ba4ed1ea93d1a3c65d42946c724d697bb0
 
     }
     else if (isMobile && isIOS) {
@@ -52,8 +38,7 @@ class MainPage extends Component {
     return x;
   }
 
-<<<<<<< HEAD
-    }
+    
         
   
   constructor(props) {
@@ -85,8 +70,6 @@ class MainPage extends Component {
   else {alert("Not a json file. Please upload a json file")}
     
   }
-=======
->>>>>>> 5ec2c4ba4ed1ea93d1a3c65d42946c724d697bb0
 
   render() {
 
@@ -116,7 +99,8 @@ class MainPage extends Component {
         </header>
       </div>
     );
-  };
-}
+    }
+  }
+
 
 export default MainPage;

@@ -2,8 +2,8 @@ var request = require('request');
 var cheerio = require('cheerio');
 var url = require('url-parse');
 
-var START_URL = "http://www.amazon.com";
-var SEARCH_WORD = "deal of the day";
+var START_URL = "https://www.w3schools.com/jsref/jsref_replace.asp";
+var SEARCH_WORD = "project";
 var MAX_PAGES_TO_VISIT = 10;
 
 var pagesVisited = {};
@@ -49,9 +49,10 @@ function visitPage(url, callback) {
     if (response.statusCode === 200) {
       // Parse the document body
       var $ = cheerio.load(body);
+
       var isWordFound = searchForWord($, SEARCH_WORD);
       if (isWordFound) {
-        console.log("Word " + SEARCH_WORD + "found at page " + url);
+        console.log("Word " + SEARCH_WORD + " found at page " + url);
       }
       else {
         collectInternalLinks($);
@@ -68,6 +69,15 @@ function visitPage(url, callback) {
 
 function searchForWord($, word) {
   var bodyText = $('html > body').text().toLowerCase();
+  $('html > body').each(function (i, element) {
+    const $element = $(element);
+    var str=$element.text();
+    str=str.replace("\n","");
+
+    
+    console.log(str);
+  })
+  //console.log(bodyText);
   return (bodyText.indexOf(word.toLowerCase()) !== -1);
 }
 

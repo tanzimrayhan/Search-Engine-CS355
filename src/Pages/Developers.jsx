@@ -13,7 +13,7 @@ class Developers extends Component{
                 <Jumbotron className="App" style={{ color: 'Black' }}>
                     <h1>Hello!</h1>
                     <p>
-                        This App has been developed by Tanzim Ali. I am a junior from Queens College majoring in Comoputer Science. Click the button below to learn more about me and my projects.
+                        This App has been developed by Tanzim Ali. I am a junior from Queens College majoring in Computer Science. Click the button below to learn more about me and my projects.
                     </p>
                     <p>
                         <Button href="https://github.com/tanzimrayhan" variant="primary">Learn more</Button>
