@@ -7,22 +7,25 @@ import axios from 'axios';
 
 class Toolbar extends React.Component {
   state = {
-    name: '',
+    word: '',
   }
 
   handleChange = event => {
-    this.setState({ searchWord: event.target.value });
-    console.log(this.state.name)
+    this.setState({ word: event.target.value });
+    
   }
 
   handleSubmit = event => {
     event.preventDefault();
+    console.log(this.state.word);
 
-    const user = {
-      name: this.state.name
-    };
+    
 
-    axios.post(`https://http://localhost:5000/search`, {user})
+    
+
+    axios.post(`http://localhost:5000/search`, {
+      word:this.state.word
+    })
       .then(res => {
         console.log(res);
         console.log(res.data);
@@ -67,9 +70,9 @@ class Toolbar extends React.Component {
           <NavDropdown.Item><Link to="/~alta2882/cs355/searchByFile" style={{ color: "grey" }}>Search By File</Link></NavDropdown.Item>
         </Nav>
 
-        <Form inline>
-          <FormControl type="text" placeholder="Search" onChange={this.handleChange} className="mr-sm-2" />
-          <Button type="submit" variant="outline-success">Search</Button>
+        <Form inline  onSubmit={this.handleSubmit}>
+          <FormControl type="text" placeholder="Search" onChange={this.handleChange}  className="mr-sm-2" />
+          <button type="submit"  variant="outline-success">Search</button>
         </Form>
       </Navbar.Collapse>
     </Navbar>

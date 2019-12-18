@@ -26,8 +26,8 @@ app.get("/", (req, res) => {
 });
 
 app.post("/search", (req,res)=>{
-  
-  console.log(JSON.stringify(req.body.name));
+  var word=JSON.stringify(req.body);
+  console.log(word);
   return res.status(200).send("Got a word");
 })
 
@@ -108,7 +108,8 @@ function visitPage(url, callback) {
         callback();
       }*/
       console.log("Page title:  " + $('title').text());
-      var bodyText = $('html > body').text().toLowerCase();
+      //var bodyText = $('html > body').text().toLowerCase();
+      //console.log(bodyText)
   $('html > body').each(function (i, element) {
     const $element = $(element);
     var str=$element.text();
@@ -118,7 +119,7 @@ function visitPage(url, callback) {
       
       
     
-    //console.log(str);
+   // console.log(str);
   })
 
   //collectInternalLinks($);
