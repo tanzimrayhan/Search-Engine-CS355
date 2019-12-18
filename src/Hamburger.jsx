@@ -2,10 +2,31 @@ import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Nav, Navbar, NavDropdown, Form, FormControl, Button } from 'react-bootstrap'
 import { Link } from "react-router-dom"
+import axios from 'axios';
 
 
 class Toolbar extends React.Component {
-  
+  state = {
+    searchWord: '',
+  }
+
+  handleChange = event => {
+    this.setState({ searchWord: event.target.value });
+  }
+
+  handleSubmit = event => {
+    event.preventDefault();
+
+    const body = {
+      searchWord: this.state.searchWord
+    };
+
+    axios.post(`https://http://localhost:5000/search`, { body })
+      .then(res => {
+        console.log(res);
+        console.log(res.data);
+      })
+  }
   
   render(){
     return(
@@ -46,8 +67,8 @@ class Toolbar extends React.Component {
         </Nav>
 
         <Form inline>
-          <FormControl type="text" placeholder="Search" className="mr-sm-2" />
-          <Button variant="outline-success">Search</Button>
+          <FormControl type="text" placeholder="Search" onChange={this.handleChange} className="mr-sm-2" />
+          <Button type="submit" variant="outline-success">Search</Button>
         </Form>
       </Navbar.Collapse>
     </Navbar>
