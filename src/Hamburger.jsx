@@ -7,21 +7,22 @@ import axios from 'axios';
 
 class Toolbar extends React.Component {
   state = {
-    searchWord: '',
+    name: '',
   }
 
   handleChange = event => {
     this.setState({ searchWord: event.target.value });
+    console.log(this.state.name)
   }
 
   handleSubmit = event => {
     event.preventDefault();
 
-    const body = {
-      searchWord: this.state.searchWord
+    const user = {
+      name: this.state.name
     };
 
-    axios.post(`https://http://localhost:5000/search`, { body })
+    axios.post(`https://http://localhost:5000/search`, {user})
       .then(res => {
         console.log(res);
         console.log(res.data);

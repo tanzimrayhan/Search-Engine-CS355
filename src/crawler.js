@@ -9,16 +9,26 @@ var pageId=1000;
 var express=require ('express');
 var path=require ('path');
 var app=express();
-var body=require('body-parser');
+var cors = require('cors'); 
+var bodyParser=require('body-parser');
 const port=process.env.PORT||5000;
 
+
+app.use(cors());
+
+app.use(bodyParser.urlencoded({
+  extended: false
+}))
+
+app.use(bodyParser.json())
 app.get("/", (req, res) => {
   res.status(200).send("WHATABYTE: Food For Devs");
 });
 
-app.post("/search", (body,req,res)=>{
-  console.log(req.body.searchWord);
-  res.send("Got a word");
+app.post("/search", (req,res)=>{
+  
+  console.log(JSON.stringify(req.body.name));
+  return res.status(200).send("Got a word");
 })
 
 var pagesVisited = {};
