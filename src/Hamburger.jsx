@@ -68,6 +68,7 @@ class Toolbar extends React.Component {
 
           </NavDropdown>
           <NavDropdown.Item><Link to="/~alta2882/cs355/searchByFile" style={{ color: "grey" }}>Search By File</Link></NavDropdown.Item>
+          <NavDropdown.Item><Link to="/~alta2882/cs355/indexPage" style={{ color: "grey" }}>Index Page</Link></NavDropdown.Item>
         </Nav>
 
         <Form inline  onSubmit={this.handleSubmit}>

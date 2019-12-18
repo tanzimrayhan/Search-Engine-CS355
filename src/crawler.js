@@ -2,7 +2,7 @@ var request = require('request');
 var cheerio = require('cheerio');
 var url = require('url-parse');
 var mysql=require('mysql');
-var START_URL = "https://www.w3schools.com/";
+var START_URL = "https://www.google.com/";
 var SEARCH_WORD = "project";
 var MAX_PAGES_TO_VISIT = 10;
 var pageId=1000;
@@ -112,14 +112,21 @@ function visitPage(url, callback) {
       //console.log(bodyText)
   $('html > body').each(function (i, element) {
     const $element = $(element);
-    var str=$element.text();
-    str=str.replace("\n","");
+    var str=$element.text()+" ";
+    //str=str.replace("\n","");
     str = str.replace(/^\s*$[\n\r]{1,}/gm, '')
     
+    
+    
+    var words=str.split(" ");
+    for(var i=0; i<words.length-1;i++){
+      words[i]+=" ";
+    }
+    
       
       
     
-   // console.log(str);
+   console.log(words);
   })
 
   //collectInternalLinks($);

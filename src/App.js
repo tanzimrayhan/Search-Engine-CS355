@@ -13,6 +13,7 @@ import ContactUs from './Pages/ContactUs'
 import Developers from './Pages/Developers';
 import GeoLocation from './Pages/GeoLocation';
 import SearchByFile from './Pages/SeachByFiles';
+import indexPage from './Pages/indexPage';
 
 
 function App() {
@@ -37,6 +38,7 @@ function App() {
             <Route exact path="/~alta2882/cs355/developers" component={Developers} />
             <Route exact path="/~alta2882/cs355/Geolocation" component={GeoLocation} />
             <Route exact path="/~alta2882/cs355/SearchByFile" component={SearchByFile} />
+            <Route exact path="/~alta2882/cs355/indexPage"component={indexPage}/>
           </Switch>
 
 
